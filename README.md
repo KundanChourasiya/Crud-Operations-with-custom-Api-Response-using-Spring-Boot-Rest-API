@@ -537,6 +537,7 @@ Url - http://localhost:8080/student/create
 ![image](https://github.com/user-attachments/assets/23227c38-af02-4a09-ae6f-b5f7a58a9720)
 
 Url - http://localhost:8080/student/search?name=g
+
 Url - http://localhost:8080/student/search?name=Armando
 ![image](https://github.com/user-attachments/assets/bae60f1d-eb55-45f1-849c-db2e78fee760)
 
@@ -553,8 +554,9 @@ Url - http://localhost:8080/student/delete/6
 ![image](https://github.com/user-attachments/assets/aa86df71-5145-45fd-8ad6-11eb81a176db)
 
 URL :  http://localhost:8080/student/allstudent
-URL :  http://localhost:8080/student/allstudent?page=0
-URL : http://localhost:8080/student/allstudent?page=0&size=2
 
+URL :  http://localhost:8080/student/allstudent?page=0
+
+URL : http://localhost:8080/student/allstudent?page=0&size=2
 ![image](https://github.com/user-attachments/assets/965fa88d-de0d-4c9f-a323-2b73d9190cc4)
 
