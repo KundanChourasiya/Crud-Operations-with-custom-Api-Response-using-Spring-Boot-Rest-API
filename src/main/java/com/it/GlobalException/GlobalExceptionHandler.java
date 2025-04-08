@@ -29,7 +29,7 @@ public class GlobalExceptionHandler {
 
     // IllegalArgumentException Handler
     @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<ApiResponse<Object>> IllegalArgumentExceptionHandle (IllegalArgumentException ex) {
+    public ResponseEntity<ApiResponse<Object>> IllegalArgumentExceptionHandle(IllegalArgumentException ex) {
         ApiResponse<Object> response = new ApiResponse<>(false, ex.getMessage(), null);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
     }

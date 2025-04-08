@@ -25,7 +25,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     // map to dto
-    private StudentDto mapTODto(Student student){
+    private StudentDto mapTODto(Student student) {
         StudentDto dto = new StudentDto();
         dto.setId(student.getId());
         dto.setFullName(student.getFullName());
@@ -38,7 +38,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     // map to Entity
-    private  Student mapToEntity(StudentDto dto){
+    private Student mapToEntity(StudentDto dto) {
         Student student = new Student();
         student.setId(dto.getId());
         student.setFullName(dto.getFullName());
@@ -52,7 +52,7 @@ public class StudentServiceImpl implements StudentService {
 
 
     @Override
-    public StudentDto  createStudent(StudentDto dto) {
+    public StudentDto createStudent(StudentDto dto) {
         Student student = new Student();
         student.setId(dto.getId());
         student.setFullName(dto.getFullName());
@@ -62,14 +62,14 @@ public class StudentServiceImpl implements StudentService {
         student.setAge(dto.getAge());
         student.setMobile(dto.getMobile());
 
-        if (studentRepository.existsByEmail(dto.getEmail())){
-            throw new  IllegalArgumentException("User email already exist.");
+        if (studentRepository.existsByEmail(dto.getEmail())) {
+            throw new IllegalArgumentException("User email already exist.");
         }
-            if (studentRepository.existsByMobile(dto.getMobile())){
-                throw new  IllegalArgumentException("User Mobile no. already exist.");
-            }
+        if (studentRepository.existsByMobile(dto.getMobile())) {
+            throw new IllegalArgumentException("User Mobile no. already exist.");
+        }
 
-            Student saveStudent = studentRepository.save(student);
+        Student saveStudent = studentRepository.save(student);
         StudentDto studentDto = mapTODto(saveStudent);
         return studentDto;
     }
