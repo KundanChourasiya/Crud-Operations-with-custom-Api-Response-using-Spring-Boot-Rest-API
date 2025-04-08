@@ -72,32 +72,32 @@ user this data for checking purpose.
 3. For Validation
 ``` 
  <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
 ```
 
 4. For Swagger
 ``` 
 <dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-			<version>2.3.0</version>
-		</dependency>
+	<groupId>org.springdoc</groupId>
+	<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+	<version>2.3.0</version>
+</dependency>
 ```
 
 5. For Mysql and JPA
 ``` 
 <dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+	<groupId>com.mysql</groupId>
+	<artifactId>mysql-connector-j</artifactId>
+	<scope>runtime</scope>
+	</dependency>
 
 <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
 ```
 
 ## Create Student class in Entity Package.
@@ -448,11 +448,13 @@ public class UserNotFoundException extends RuntimeException{
 
 ![image](https://github.com/user-attachments/assets/ab1b5567-08de-4994-b51a-704b97401a3f)
 
-### *PostMan*
+### *PostMan Test Cases*
 
-Url - 
+Url - http://localhost:8080/student/create
+![image](https://github.com/user-attachments/assets/23227c38-af02-4a09-ae6f-b5f7a58a9720)
 
-Url - 
+Url - http://localhost:8080/student/search?name=g
+![image](https://github.com/user-attachments/assets/bae60f1d-eb55-45f1-849c-db2e78fee760)
 
 Url - 
 
