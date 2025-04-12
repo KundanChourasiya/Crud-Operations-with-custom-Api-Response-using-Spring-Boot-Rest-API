@@ -102,16 +102,6 @@ user this data for checking purpose.
 
 ## Create Student class in Entity Package.
 ```
-package com.it.Entity;
-
-import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.time.LocalDateTime;
-
 @Getter
 @Setter
 @Entity
@@ -153,21 +143,12 @@ public class Student {
 
 ## Create StudentRepository interface in repository package.
 
-```package com.it.Repository;
-
-import com.it.Entity.Student;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.List;
-
+```
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long> {
 
     boolean existsByEmail(String email);
     boolean existsByMobile(String mobile);
-
-
     List<Student> findByFullNameContainingIgnoreCase(String fullname);
 
 }
@@ -203,7 +184,7 @@ public interface StudentService {
 }
 ```
 
-### *StudentService*
+### *StudentServiceImpl*
 ```
 @Service
 public class StudentServiceImpl implements StudentService {
